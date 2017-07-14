@@ -19,8 +19,11 @@ public class LerObrigatorias {
 				String[] row = line.split(",");
 				int tamanho = row.length;
 				for(int i = 3; i < tamanho; i++ ){
-					writer.append(row[i]);
-					writer.append(',');
+					if ((i+1)%3 != 0){
+							writer.append(row[i]);
+							writer.append(',');
+						}
+					
 				}
 				writer.append('\n');
 			}
